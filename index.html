@@ -782,6 +782,37 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Service Card ke andar image ko adjust karne ke liye CSS */
+        .service-image {
+            width: 100%;            /* Image poore card ki width cover kare */
+            height: 180px;          /* Images ki fixed height taake saare cards aik jaise dikhein */
+            object-fit: cover;      /* Image stretch na ho, balkey sahi se crop ho */
+            border-radius: 8px 8px 0 0; /* Sirf upar ke corners round karne ke liye */
+            margin-bottom: 15px;    /* Text se thora fasla */
+        }
+
+        /* Service Card ki styling (Agar pehle se nahi hai) */
+        .service-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 0;             /* Padding remove karein taake image edges tak jaye */
+            text-align: center;
+            overflow: hidden;       /* Round corners apply hone ke liye zaroori hai */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Service Card ke Text ki Padding (Kyun ke card se padding remove ki thi) */
+        .service-card h3, .service-card p {
+            padding: 0 15px;        /* Text ko side se fasla dene ke liye */
+            color: #000;
+        }
+
+        .service-card p {
+            padding-bottom: 20px;   /* Bottom se fasla */
+            color: #666;
+        }
     </style>
     </head>
     <body>
@@ -988,7 +1019,8 @@
             <section style="padding: 30px 0;">
                 <div class="container">
                     <div class="section-title">
-                        <h3>Leave a <span style="color: #E60000;">Review</span></h3>
+                        <h3>Leave a <span
+                                style="color: #E60000;">Review</span></h3>
                     </div>
                     <form id="reviewForm" class="contact-form"
                         style="max-width: 600px; margin: 0 auto;">
@@ -1338,7 +1370,7 @@
         <!-- ==========================================================================
        SERVICES OVERVIEW PAGE VIEW
        ========================================================================== -->
-        <main id="services-page" class="page-view">
+        <!-- <main id="services-page" class="page-view">
             <div class="container">
                 <div class="section-title">
                     <h2>All <span>Services</span></h2>
@@ -1383,6 +1415,81 @@
                         <p>Repair leaky rubber or metal tyre valves that cause
                             steady air loss.</p>
                     </div>
+                </div>
+            </div>
+        </main> -->
+
+        <main id="services-page" class="page-view">
+            <div class="container">
+                <div class="section-title">
+                    <h2>All <span>Services</span></h2>
+                    <p>Explore our complete list of mobile auto and tyre
+                        services</p>
+                </div>
+                <div class="services-grid">
+
+                    <!-- 1. Car Tyre Replacement -->
+                    <div class="service-card">
+                        <!-- Icon ko replace kiya image se -->
+                        <img src="images/car-tyre-replacement.jpg"
+                            alt="Car Tyre Replacement - MI Mobile Tyre"
+                            class="service-image" />
+                        <h3>Car Tyre Replacement</h3>
+                        <p>Wide selection of premium and budget car tyres fitted
+                            directly at home or office.</p>
+                    </div>
+
+                    <!-- 2. Commercial Van Tyres -->
+                    <div class="service-card">
+                        <img src="images/commercial-van-tyres.jpg"
+                            alt="Commercial Van Tyres - MI Mobile Tyre"
+                            class="service-image" />
+                        <h3>Commercial Van Tyres</h3>
+                        <p>Heavy duty, high-load-rated van tyres to keep your
+                            trade business moving.</p>
+                    </div>
+
+                    <!-- 3. 4x4 & SUV Tyres -->
+                    <div class="service-card">
+                        <img src="images/4x4-suv-tyres.jpg"
+                            alt="4x4 & SUV Tyres - MI Mobile Tyre"
+                            class="service-image" />
+                        <h3>4x4 & SUV Tyres</h3>
+                        <p>All-terrain, mud-terrain, and highway tyres tailored
+                            for high performance SUVs.</p>
+                    </div>
+
+                    <!-- 4. Wheel Balancing -->
+                    <div class="service-card">
+                        <img src="images/wheel-balancing.jpg"
+                            alt="Mobile Wheel Balancing - MI Mobile Tyre"
+                            class="service-image" />
+                        <h3>Wheel Balancing</h3>
+                        <p>Computerized mobile wheel balancing to eliminate
+                            vibrations and extend tread lifespan.</p>
+                    </div>
+
+                    <!-- 5. Locking Wheel Nut Removal -->
+                    <div class="service-card">
+                        <img src="images/locking-nut-removal.jpg"
+                            alt="Locking Wheel Nut Removal - MI Mobile Tyre"
+                            class="service-image" />
+                        <h3>Locking Wheel Nut Removal</h3>
+                        <p>Lost your nut key? We carry specialized extraction
+                            equipment to safely remove nuts without rim
+                            damage.</p>
+                    </div>
+
+                    <!-- 6. Emergency Valve Replacement -->
+                    <div class="service-card">
+                        <img src="images/valve-replacement.jpg"
+                            alt="Emergency Valve Replacement - MI Mobile Tyre"
+                            class="service-image" />
+                        <h3>Emergency Valve Replacement</h3>
+                        <p>Repair leaky rubber or metal tyre valves that cause
+                            steady air loss.</p>
+                    </div>
+
                 </div>
             </div>
         </main>

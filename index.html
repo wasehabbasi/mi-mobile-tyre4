@@ -66,13 +66,11 @@
             --font-body: 'Open Sans', sans-serif;
             --transition: all 0.3s ease;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
             font-family: var(--font-body);
@@ -80,17 +78,14 @@
             color: var(--text-white);
             line-height: 1.6;
         }
-
         a {
             text-decoration: none;
             color: inherit;
             transition: var(--transition);
         }
-
         ul {
             list-style: none;
         }
-
         img {
             max-width: 100%;
             height: auto;
@@ -102,8 +97,6 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* Typography */
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-heading);
             text-transform: uppercase;
@@ -137,8 +130,6 @@
             margin-top: 10px;
             font-size: 1.1rem;
         }
-
-        /* Common Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -181,10 +172,6 @@
             background-color: var(--text-white);
             color: var(--dark-bg);
         }
-
-        /* ==========================================================================
-           2. HEADER & NAVIGATION
-           ========================================================================== */
         header {
             position: sticky;
             top: 0;
@@ -245,11 +232,7 @@
             font-size: 1.5rem;
             color: var(--text-white);
         }
-
-        /* ==========================================================================
-           3. FLOATING CONTACT BUTTONS (MANDATORY)
-           ========================================================================== */
-        .floating-buttons {
+.floating-buttons {
             position: fixed;
             right: 20px;
             bottom: 30px;
@@ -280,26 +263,19 @@
 .float-btn:hover {
             transform: scale(1.1);
         }
-
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(230, 0, 0, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(230, 0, 0, 0); }
             100% { box-shadow: 0 0 0 0 rgba(230, 0, 0, 0); }
         }
-
-        /* ==========================================================================
-           4. PAGE CONTENT & ROUTING
-           ========================================================================== */
-        .page-view {
+.page-view {
             display: none;
             padding: 40px 0;
         }
 .page-view.active-page {
             display: block;
         }
-
-        /* Hero Section */
-        .hero {
+.hero {
             position: relative;
             background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
             padding: 120px 0 80px;
@@ -346,8 +322,6 @@
             color: var(--primary-red);
             font-size: 1.2rem;
         }
-
-        /* Services Cards Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -391,8 +365,6 @@
             font-size: 0.95rem;
             margin-bottom: 20px;
         }
-
-        /* Why Choose Us */
         .why-us-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -410,8 +382,6 @@
             color: var(--primary-red);
             margin-bottom: 15px;
         }
-
-        /* Emergency Section Banner */
         .emergency-banner {
             background: linear-gradient(90deg, #1A0000 0%, #3A0000 100%);
             border: 2px solid var(--primary-red);
@@ -431,8 +401,6 @@
 .emergency-banner p {
             color: var(--text-gray);
         }
-
-        /* How It Works Timeline */
         .timeline {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -510,8 +478,6 @@
             color: var(--text-white);
             margin: 15px 0;
         }
-
-        /* FAQ Accordion */
         .faq-accordion {
             max-width: 800px;
             margin: 0 auto;
@@ -544,9 +510,7 @@
 .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
-
-        /* Testimonials */
-        .testimonials-grid {
+.testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
@@ -561,9 +525,7 @@
             color: #FFD700;
             margin-bottom: 10px;
         }
-
-        /* Service Areas List */
-        .service-areas-grid {
+.service-areas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 15px;
@@ -576,8 +538,6 @@
             border-radius: 4px;
             font-weight: 600;
         }
-
-        /* Contact Form */
         .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -616,10 +576,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 15px;
         }
-
-        /* ==========================================================================
-           5. FOOTER
-           ========================================================================== */
         footer {
             background-color: #050505;
             border-top: 1px solid var(--dark-border);
@@ -663,16 +619,11 @@
             color: var(--text-muted);
             font-size: 0.85rem;
         }
-
-        /* ==========================================================================
-           6. RESPONSIVE MEDIA QUERIES
-           ========================================================================== */
         @media (max-width: 992px) {
             .contact-wrapper {
                 grid-template-columns: 1fr;
             }
         }
-
         @media (max-width: 768px) {
             .nav-menu {
                 position: fixed;
@@ -686,40 +637,31 @@
                 padding-top: 40px;
                 transition: var(--transition);
             }
-
-            .nav-menu.active {
+    .nav-menu.active {
                 left: 0;
             }
-
             .hamburger {
                 display: block;
             }
-
             .hero h1 {
                 font-size: 2.2rem;
             }
-
             .emergency-banner {
                 flex-direction: column;
                 text-align: center;
             }
-
             .form-row {
                 grid-template-columns: 1fr;
             }
         }
-
-        /* Service Card ke andar image ko adjust karne ke liye CSS */
-        .service-image {
+.service-image {
             width: 100%;            /* Image poore card ki width cover kare */
             height: 180px;          /* Images ki fixed height taake saare cards aik jaise dikhein */
             object-fit: cover;      /* Image stretch na ho, balkey sahi se crop ho */
             border-radius: 8px 8px 0 0; /* Sirf upar ke corners round karne ke liye */
             margin-bottom: 15px;    /* Text se thora fasla */
         }
-
-        /* Service Card ki styling (Agar pehle se nahi hai) */
-        .service-card {
+.service-card {
             background: #fff;
             border: 1px solid #eee;
             border-radius: 8px;
@@ -728,9 +670,7 @@
             overflow: hidden;       /* Round corners apply hone ke liye zaroori hai */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        /* Service Card ke Text ki Padding (Kyun ke card se padding remove ki thi) */
-        .service-card h3, .service-card p {
+.service-card h3, .service-card p {
             padding: 0 15px;        /* Text ko side se fasla dene ke liye */
             color: #000;
         }
@@ -1295,7 +1235,7 @@
         <!-- ==========================================================================
        SERVICES OVERVIEW PAGE VIEW
        ========================================================================== -->
-        
+
         <main id="services-page" class="page-view">
             <div class="container">
                 <div class="section-title">
